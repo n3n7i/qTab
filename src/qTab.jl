@@ -28,6 +28,13 @@ function quickTable(data, xfun)
   return ret;
   end;
 
+function quickTable(data) 
+  
+  x = qfunc(data[1, :]);
+  return Base.invokelatest(quickTable, data, x);
+  end;
+
+
 export quickTable, qfunc;
 
 end # module
